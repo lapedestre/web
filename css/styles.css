@@ -3546,7 +3546,10 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-
+.text-normal{
+  color: #000;
+  
+}
 .dropup,
 .dropend,
 .dropdown,
