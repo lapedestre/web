@@ -11486,7 +11486,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/fotoUno.jpg");
+  background-image: url("../assets/img/header24_2.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11793,7 +11793,15 @@ header.masthead .masthead-heading {
 .img-brand {
   height: 2.75rem;
 }
+#fecha{
+  font-size: 0.8rem;
+  background-color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: white;
 
+}
 section#contact {
   background-color: #212529;
   background-image: url("../assets/img/map-image.png");
