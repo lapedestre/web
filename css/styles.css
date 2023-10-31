@@ -2623,6 +2623,9 @@ textarea.form-control-lg {
   display: inline-block;
   margin-right: 1rem;
 }
+.btn-inscripcion{
+  padding-bottom: 20px;
+}
 
 .btn-check {
   position: absolute;
