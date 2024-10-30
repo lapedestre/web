@@ -22,7 +22,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             fetch('assets/carrera.txt')
                 .then(response => response.text())
                 .then(data => {
@@ -53,7 +53,7 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="#fotos">Fotos</a></li>
                     <li class="nav-item"><a class="nav-link" href="question.html">Preguntas frecuentes</a></li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -61,7 +61,7 @@
     <!-- Masthead-->
     <header class="masthead">
         <!-- <div class="container"> -->
-            <!-- <div class="masthead-subheading">¡Bienvenidos!</div>
+        <!-- <div class="masthead-subheading">¡Bienvenidos!</div>
             <div class="masthead-heading text-uppercase">CARRERA PEDESTRE SIERRA DE MARMOLEJO</div> -->
         <!-- </div> -->
     </header>
@@ -70,12 +70,12 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">9 DE FEBRERO DE 2025</h2>
-                <h3 class="section-heading text-uppercase"> Dos distancias 23k y 13k</h3> 
-                <h3 class="section-heading text-uppercase">Nuevos recorridos, + diversión</h3> 
+                <h3 class="section-heading text-uppercase"> Dos distancias 23k y 13k</h3>
+                <h3 class="section-heading text-uppercase">Nuevos recorridos, + diversión</h3>
             </div>
         </div>
     </div>
-
+<!-- section carrera -->
     <section class="page-section" id="carrera">
         <div class="container">
             <div class="text-center">
@@ -87,6 +87,7 @@
 
         </div>
     </section>
+    <!-- section services -->
     <section class="page-section bg-light" id="services">
         <div class="container">
             <div class="text-center">
@@ -112,9 +113,7 @@
                     </span>
                     <h4 class="my-3">Inscripciones</h4>
                     <div class="text-center">
-                        <a class="btn btn-primary btn-xl"
-                            href="#"
-                            rel="noopener noreferrer">IR A INSCRPCIONES</a>
+                        <a class="btn btn-primary btn-xl" href="#" rel="noopener noreferrer">IR A INSCRPCIONES</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -124,14 +123,16 @@
                     </span>
                     <h4 class="my-3">Reglamento</h4>
                     <div class="text-center">
-                        <a class="btn btn-primary btn-xl" href="https://drive.google.com/file/d/1YCsOELleGjRmev_DuJENcwTam6d0VL68/view?usp=drive_link" target="_blank" rel="noopener noreferrer">IR A REGLAMENTO</a>
+                        <a class="btn btn-primary btn-xl"
+                            href="https://drive.google.com/file/d/1YCsOELleGjRmev_DuJENcwTam6d0VL68/view?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer">IR A REGLAMENTO</a>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services-->
+    <!--  section trofeo -->
     <section class="page-section" id="trofeo">
         <!-- section trofeo -->
         <div class="container">
@@ -155,7 +156,7 @@
                         </span>
                         <h4 class="my-3">Inscripciones</h4>
                         <div class="text-center">
-                            <a class="btn btn-primary btn-xl"  rel="noopener noreferrer" href="#">INSCRIPCION
+                            <a class="btn btn-primary btn-xl" rel="noopener noreferrer" href="#">INSCRIPCION
                                 EQUIPOS</a>
                         </div>
                     </div>
@@ -166,7 +167,9 @@
                         </span>
                         <h4 class="my-3">Reglamento</h4>
                         <div class="text-center">
-                            <a class="btn btn-primary btn-xl" target="_blank" href="https://drive.google.com/file/d/1XgUQUh0pFlrPOD83MyVA6WTJbcpA2PJv/view?usp=sharing">REGLAMENTO TROFEO</a>
+                            <a class="btn btn-primary btn-xl" target="_blank"
+                                href="https://drive.google.com/file/d/1XgUQUh0pFlrPOD83MyVA6WTJbcpA2PJv/view?usp=sharing">REGLAMENTO
+                                TROFEO</a>
                         </div>
 
                     </div>
@@ -177,9 +180,7 @@
                         </span>
                         <h4 class="my-3">CLASIFICACION EQUIPOS</h4>
                         <div class="text-center">
-                            <a class="btn btn-primary btn-xl"
-                                href="#"
-                                >RESULTADOS EQUIPOS</a>
+                            <a class="btn btn-primary btn-xl" href="#">RESULTADOS EQUIPOS</a>
                         </div>
                     </div>
 
@@ -187,48 +188,29 @@
             </div>
         </div>
     </section>
-    <!-- Portfolio Grid-->
-    <!-- <section class="page-section bg-light" id="portfolio">
+    <!-- section Portfolio -->
+    <section class="page-section bg-light" id="portfolio">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Perfil de la carrera</h2>
-                <h3 class="section-subheading text-muted">Perfil y avituallamientos</h3>
-            </div>
             <div class="row">
-                <div class="col-lg-6 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/6.png" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Recorrido</div>
-                            <div class="portfolio-caption-subheading text-muted">Recorrido de la carrera</div>
-                        </div>
-                    </div>
+                <div class="col-md-6 text-center">
+                    <h2>Modalidad Corta</h2>
+                    <p>13k 500+</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCorta">
+                        Más Información
+                    </button>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/1.png" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Perfil</div>
-                            <div class="portfolio-caption-subheading text-muted">Perfil y avituallamientos</div>
-                        </div>
-                    </div>
+                <div class="col-md-6 text-center">
+                    <h2>Modalidad Larga</h2>
+                    <p>24k 950+</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLarga">
+                        Más Información
+                    </button>
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- About-->
+    </section>
 
-    <!-- Team-->
+    <!-- section Team-->
     <section class="page-section bg-light" id="team">
 
         <div class="container">
@@ -264,7 +246,7 @@
             </div>
         </div>
     </section>
-    <!-- Clients-->
+    <!-- section Clients-->
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-3 col-sm-6 my-3">
@@ -290,14 +272,17 @@
             <div class="text-center">
                 <h3 class="section-heading text-uppercase">FOTOS DE LA EDICION 2024</h3>
                 <div class="text-center btn-inscripcion button-container">
-                    <a class="btn btn-primary btn-xl custom-button" href="https://photos.app.goo.gl/9aJXFY4n6TAzmGP5A" target="_blank" rel="noopener">Salida/meta/balneario</a>
-                    <a class="btn btn-primary btn-xl custom-button" href="https://www.facebook.com/media/set?vanity=100063155323225&set=a.718331683615336" target="_blank" rel="noopener">fotosrunner 1</a>
+                    <a class="btn btn-primary btn-xl custom-button" href="https://photos.app.goo.gl/9aJXFY4n6TAzmGP5A"
+                        target="_blank" rel="noopener">Salida/meta/balneario</a>
+                    <a class="btn btn-primary btn-xl custom-button"
+                        href="https://www.facebook.com/media/set?vanity=100063155323225&set=a.718331683615336"
+                        target="_blank" rel="noopener">fotosrunner 1</a>
                     <!-- Puedes agregar más botones aquí -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact-->
+    <!-- section Contact-->
     <section class="page-section" id="contact">
         <div class="container">
             <div>
@@ -378,62 +363,55 @@
             </div>
         </div>
     </footer>
-    <!-- Portfolio Modals-->
-    <!-- Portfolio item 1 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                        alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Recorrido de la carrera</h2>
-
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.png" alt="..." />
-
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                    type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Cerrar
-                                </button>
-                            </div>
+<!-- Modal Modalidad Corta -->
+<!-- <div class="portfolio-modal modal fade" id="modalCorta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            
+                            <h2 class="text-uppercase">Modalidad Corta</h2>
+                            <p class="item-intro text-muted">Información detallada sobre la Modalidad Corta.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.png" alt="..." />
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Cerrar
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Portfolio item 6 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                        alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Perfil</h2>
-                                <p class="item-intro text-muted">perfil de la carrera y avituallamientos</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.png" alt="..." />
-
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                    type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Cerrar
-                                </button>
-                            </div>
+</div> -->
+    <!-- Modal Modalidad Larga -->
+<!-- <div class="portfolio-modal modal fade" id="modalLarga" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            
+                            <h2 class="text-uppercase">Modalidad Larga</h2>
+                            <p class="item-intro text-muted">Información detallada sobre la Modalidad Larga.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.png" alt="..." />
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Cerrar
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap core JS-->
+</div> -->
+  <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
