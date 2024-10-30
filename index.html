@@ -21,6 +21,15 @@
 
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('assets/carrera.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('carrera-texto').innerHTML = data.replace(/\n/g, '<br><br>');
+                });
+        });
+    </script>
 </head>
 
 <body id="page-top">
@@ -39,74 +48,40 @@
 
                     <li class="nav-item"><a class="nav-link" href="#services">Individual</a></li>
                     <li class="nav-item"><a class="nav-link" href="#trofeo">Trofeo clubes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Datos Tecnicos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Perfiles</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">COLABORADORES</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fotos">Fotos</a></li>
                     <li class="nav-item"><a class="nav-link" href="question.html">Preguntas frecuentes</a></li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Masthead-->
     <header class="masthead">
-        <div class="container">
-            <div class="masthead-subheading">¡Bienvenidos!</div>
-            <div class="masthead-heading text-uppercase">CARRERA PEDESTRE SIERRA DE MARMOLEJO</div>
-
-
-        </div>
+        <!-- <div class="container"> -->
+            <!-- <div class="masthead-subheading">¡Bienvenidos!</div>
+            <div class="masthead-heading text-uppercase">CARRERA PEDESTRE SIERRA DE MARMOLEJO</div> -->
+        <!-- </div> -->
     </header>
-
 
     <div class="masthead" id="fecha">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">FOTOS DE LA EDICION 2024</h2>
-                
-                 <div class="text-center btn-inscripcion">
-                     <a class="btn btn-primary btn-xl" href="https://photos.app.goo.gl/9aJXFY4n6TAzmGP5A" target="_blank" rel="noopener">Salida/meta/balneario</a>
-                        <a class="btn btn-primary btn-xl" href="https://www.facebook.com/media/set?vanity=100063155323225&set=a.718331683615336" target="_blank" rel="noopener">fotosrunner 1</a>
-                        <!-- <a class="btn btn-primary btn-xl" href="#" target="_blank" rel="noopener">fotosrunner 2</a> -->
-                    <!-- <a class="btn btn-primary btn-xl"
-                        href="https://www.deportime.com/carrera/xi-edicion-carrera-pedestre-sierra-de-marmolejo/"
-                        target="_blank" rel="noopener">Ir a inscripción</a> -->
-                </div> 
-                
-                   
-                
+                <h2 class="section-heading text-uppercase">9 DE FEBRERO DE 2025</h2>
+                <h3 class="section-heading text-uppercase"> Dos distancias 23k y 13k</h3> 
+                <h3 class="section-heading text-uppercase">Nuevos recorridos, + diversión</h3> 
             </div>
-
         </div>
-
     </div>
+
     <section class="page-section" id="carrera">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">La Carrera</h2>
-                <p class="text-muted">
-                    La CPSM se desarrolla en la mayor parte del recorrido por la sierra de Marmolejo teniendo su salida
-                    y
-                    llegada
-                    en el pabellón de deportes de la localidad.
-
-                    <br><br>
-                    Durante el recorrido se pasará por el famoso y conocido balneario de la localidad, se cruzará el
-                    puente
-                    renacentista de San Bartolomé, se bordeará la ribera del Guadalquivir y se adentrará en un entorno
-                    paisajístico natural típico de Sierra Morena con toda su flora y fauna característica, encinas ,
-                    jaras,
-                    romero donde con suerte se divisan águilas, buitres, ciervos y en alguna ocasión linces.
-
-                    <br><br>
-
-                    Técnicamente la carrera no presenta una gran dificultad ya que todo su recorrido discurre por sendas
-                    y
-                    caminos amplios que permite disfrutar del recorrido sin tener que preocuparnos por el tecnicismo de
-                    los
-                    caminos, la elevación de la CPSM no es muy significativa para este tipo de pruebas lo que la
-                    convierte en
-                    una prueba ideal para el inicio de temporada de pruebas de Trail y CxM
-
+                <p class="text-muted" id="carrera-texto">
+                    <!-- El contenido del archivo carrera.txt se cargará aquí -->
                 </p>
             </div>
 
@@ -213,7 +188,7 @@
         </div>
     </section>
     <!-- Portfolio Grid-->
-    <section class="page-section bg-light" id="portfolio">
+    <!-- <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Perfil de la carrera</h2>
@@ -250,7 +225,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- About-->
 
     <!-- Team-->
@@ -310,7 +285,22 @@
         </div>
     </div>
     </div>
-
+    <section class="masthead" id="fotos" >
+        <div class="container">
+            <div class="text-center">
+                <h3 class="section-heading text-uppercase">FOTOS DE LA EDICION 2024</h3>
+                
+                 <div class="text-center btn-inscripcion">
+                     <a class="btn btn-primary btn-xl" href="https://photos.app.goo.gl/9aJXFY4n6TAzmGP5A" target="_blank" rel="noopener">Salida/meta/balneario</a>
+                        <a class="btn btn-primary btn-xl" href="https://www.facebook.com/media/set?vanity=100063155323225&set=a.718331683615336" target="_blank" rel="noopener">fotosrunner 1</a>
+                        <!-- <a class="btn btn-primary btn-xl" href="#" target="_blank" rel="noopener">fotosrunner 2</a> -->
+                    <!-- <a class="btn btn-primary btn-xl"
+                        href="https://www.deportime.com/carrera/xi-edicion-carrera-pedestre-sierra-de-marmolejo/"
+                        target="_blank" rel="noopener">Ir a inscripción</a> -->
+                </div>     
+            </div>
+        </div>
+    </section>
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
@@ -438,7 +428,7 @@
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                     type="button">
                                     <i class="fas fa-xmark me-1"></i>
-                                    Cerrrar
+                                    Cerrar
                                 </button>
                             </div>
                         </div>
