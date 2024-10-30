@@ -398,6 +398,26 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones en el contenedor */
+  flex-wrap: wrap;
+  gap: 30px; /* Ajusta este valor para cambiar la separación horizontal */
+  margin-top: 20px;
+}
+
+/* Estilos para los botones personalizados */
+.button-container .custom-button {
+  display: inline-block;   /* Mantiene los botones en línea */
+  height: 40px;
+  line-height: 40px;       /* Centra el texto verticalmente */
+  padding: 0 15px;         /* Ajusta el padding horizontal */
+  text-align: center;      /* Centra el texto horizontalmente */
+  vertical-align: middle;  /* Alinea verticalmente si es necesario */
+}
+
+
 input,
 button,
 select,
