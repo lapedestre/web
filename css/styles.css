@@ -398,6 +398,26 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones en el contenedor */
+  flex-wrap: wrap;
+  gap: 30px; /* Ajusta este valor para cambiar la separación horizontal */
+  margin-top: 20px;
+}
+
+/* Estilos para los botones personalizados */
+.button-container .custom-button {
+  display: inline-block;   /* Mantiene los botones en línea */
+  height: 40px;
+  line-height: 40px;       /* Centra el texto verticalmente */
+  padding: 0 15px;         /* Ajusta el padding horizontal */
+  text-align: center;      /* Centra el texto horizontalmente */
+  vertical-align: middle;  /* Alinea verticalmente si es necesario */
+}
+
+
 input,
 button,
 select,
@@ -11490,7 +11510,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header24_2.png");
+  background-image: url("../assets/img/headerEd25.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11529,6 +11549,44 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+/* |||||||||||||||||||||||||| */
+
+/* Portfolio */
+
+/* |||||||||||||||||||||||||| */
+#portfolio .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#portfolio .row {
+  display: flex;
+  width: 100%;
+}
+
+#portfolio .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#portfolio p {
+  font-size: 1.5rem;
+}
+
+#portfolio .btn {
+  margin-top: 1rem;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -11739,6 +11797,23 @@ header.masthead .masthead-heading {
     padding: 0 30px 20px 20px;
     text-align: left;
   }
+}
+#team .team-member .img-container {
+  width: 120px; /* Ajusta el tamaño según sea necesario */
+  height: 120px; /* Ajusta el tamaño según sea necesario */
+  padding: 10px; /* Ajusta el padding según sea necesario */
+  background-color: white; /* Color de fondo para el padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+#team .team-member img {
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: 100%; /* Ajusta el tamaño según sea necesario */
+  object-fit: cover;
+  border: none; /* Elimina cualquier borde */
 }
 @media (min-width: 992px) {
   .timeline > li {
