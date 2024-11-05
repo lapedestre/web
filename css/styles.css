@@ -11798,6 +11798,23 @@ header.masthead .masthead-heading {
     text-align: left;
   }
 }
+#team .team-member .img-container {
+  width: 120px; /* Ajusta el tamaño según sea necesario */
+  height: 120px; /* Ajusta el tamaño según sea necesario */
+  padding: 10px; /* Ajusta el padding según sea necesario */
+  background-color: white; /* Color de fondo para el padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+#team .team-member img {
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: 100%; /* Ajusta el tamaño según sea necesario */
+  object-fit: cover;
+  border: none; /* Elimina cualquier borde */
+}
 @media (min-width: 992px) {
   .timeline > li {
     min-height: 150px;
