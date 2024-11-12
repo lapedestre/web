@@ -406,6 +406,9 @@ button:focus:not(:focus-visible) {
   gap: 30px; /* Ajusta este valor para cambiar la separación horizontal */
   margin-top: 20px;
 }
+.button-margin {
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
 
 /* Estilos para los botones personalizados */
 .button-container .custom-button {
