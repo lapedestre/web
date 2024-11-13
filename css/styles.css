@@ -419,6 +419,36 @@ button:focus:not(:focus-visible) {
   text-align: center;      /* Centra el texto horizontalmente */
   vertical-align: middle;  /* Alinea verticalmente si es necesario */
 }
+.back-to-top {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px; /* Ajusta el tamaño según sea necesario */
+  border-radius: 50%; /* Hace que el botón sea redondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top:hover {
+  background-color: var(--bs-danger);
+}
+
+.back-to-top i {
+  font-size: 18px; /* Ajusta el tamaño del icono según sea necesario */
+}
+
+.back-to-top:hover {
+  background-color: var(--bs-danger);
+}
 
 
 input,
