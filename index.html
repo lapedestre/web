@@ -67,16 +67,26 @@
     </header>
 
     <div class="masthead" id="fecha">
-        <div class="container">
+        <div class="container-data">
+            <!-- <div class="patrocinador">
+                <div class="container">
+                    <div class="text-center">
+                        <img src="assets/img/patrocinadores/cajaRuralBanner.jpg" alt="..." />
+                    </div>
+                </div>
+            </div> -->
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">9 DE FEBRERO DE 2025</h2>
                 <h3 class="section-heading text-uppercase"> Dos distancias 23k y 13k</h3>
                 <h3 class="section-heading text-uppercase">Nuevos recorridos, + diversión</h3>
             </div>
+
             <div class="text-center">
                 <div class="button-container">
                     <a class="btn btn-primary btn-xl button-margin" href="https://www.deportime.com/carrera/x-edicion-carrera-pedestre-sierra-de-marmolejo/" target="_blank" rel="noopener noreferrer">IR A INSCRIPCIONES</a>
                     <a class="btn btn-primary btn-xl button-margin" href="https://docs.google.com/forms/d/e/1FAIpQLSdwpQSDZyebOP393uIXRnKJuMIK4gd9T_WbXK4AkUPiGmBNgA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">FORMULARIO EQUIPOS</a>
+                    <!-- <a class="btn btn-primary btn-xl button-margin" href="https://drive.google.com/file/d/1NB2J0Yd5paoSiwLg9fgR3JMOwtWgAdiY/view?usp=sharing" target="_blank" rel="noopener noreferrer">AUTORIZACION MENORES</a>
+                 -->
                 </div>
             </div>
         </div>
@@ -195,27 +205,38 @@
             </div>
         </div>
     </section>
-    <!-- section Portfolio -->
-    <section class="page-section bg-light" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <h2>Modalidad Corta</h2>
-                    <p>13k 500+</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCorta">
-                        Más Información
+    <!-- section Portfolio Perfiles de carrrera -->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container-fluid">
+        <h3 class="text-center">Datos técnicos de la prueba</h3>
+        <div class="row gx-4"> <!-- Añadido gx-4 para el espacio entre columnas -->
+            <div class="col-md-6 text-center modalidad-corta">
+                <h2>Modalidad Corta</h2>
+                <p>13k 500+</p>
+                <div class="button-container">
+                    <button type="button" class="btn btn-primary btn-xl" data-bs-toggle="modal" data-bs-target="#modalPerfilCorta">
+                        Perfil
+                    </button>
+                    <button type="button" class="btn btn-primary btn-xl" data-bs-toggle="modal" data-bs-target="#modalTrackCorta">
+                        Track
                     </button>
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2>Modalidad Larga</h2>
-                    <p>24k 950+</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLarga">
-                        Más Información
+            </div>
+            <div class="col-md-6 text-center modalidad-larga">
+                <h2>Modalidad Larga</h2>
+                <p>23k 900+</p>
+                <div class="button-container">
+                    <button type="button" class="btn btn-primary btn-xl" data-bs-toggle="modal" data-bs-target="#modalPerfilLarga">
+                        Perfil
+                    </button>
+                    <button type="button" class="btn btn-primary btn-xl" data-bs-toggle="modal" data-bs-target="#modalTrackLarga">
+                        Track
                     </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- section Team-->
     <section class="page-section bg-light" id="team">
@@ -377,8 +398,10 @@
             </div>
         </div>
     </footer>
-<!-- Modal Modalidad Corta -->
-<!-- <div class="portfolio-modal modal fade" id="modalCorta" tabindex="-1" role="dialog" aria-hidden="true">
+
+<!-- Modal Modalidad Larga -->
+<!-- Modal Perfil Modalidad Larga -->
+<div class="portfolio-modal modal fade" id="modalPerfilLarga" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -386,11 +409,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-                            
-                            <h2 class="text-uppercase">Modalidad Corta</h2>
-                            <p class="item-intro text-muted">Información detallada sobre la Modalidad Corta.</p>
-                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.png" alt="..." />
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                            <h2 class="text-uppercase">Perfil Modalidad Larga</h2>
+                            <p class="item-intro text-muted">Información detallada sobre el perfil de la Modalidad Larga.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/perfiles/larga-perfil.png" alt="..." />
+                            <button class="btn btn-primary btn-xl text-uppercase mt-4" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-xmark me-1"></i>
                                 Cerrar
                             </button>
@@ -400,9 +422,9 @@
             </div>
         </div>
     </div>
-</div> -->
-    <!-- Modal Modalidad Larga -->
-<!-- <div class="portfolio-modal modal fade" id="modalLarga" tabindex="-1" role="dialog" aria-hidden="true">
+</div>
+<!-- Modal Track Modalidad Larga -->
+<div class="portfolio-modal modal fade" id="modalTrackLarga" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -410,11 +432,16 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-                            
-                            <h2 class="text-uppercase">Modalidad Larga</h2>
-                            <p class="item-intro text-muted">Información detallada sobre la Modalidad Larga.</p>
-                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.png" alt="..." />
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                            <h2 class="text-uppercase">Track Modalidad Larga</h2>
+                            <p class="item-intro text-muted">Información detallada sobre el track de la Modalidad Larga.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/perfiles/larga-track.png" alt="..." />
+                            <div class="text-center mt-4">
+                                <a class="btn btn-primary btn-xl text-uppercase" href="https://es.wikiloc.com/rutas-carrera-por-montana/cpsm-largo-2025-192999008" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-link me-1"></i>
+                                    Track de la carrera
+                                </a>
+                            </div>
+                            <button class="btn btn-primary btn-xl text-uppercase mt-4" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-xmark me-1"></i>
                                 Cerrar
                             </button>
@@ -424,7 +451,59 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
+<!-- Modal Perfil Modalidad Corta -->
+<div class="portfolio-modal modal fade" id="modalPerfilCorta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Perfil Modalidad Corta</h2>
+                            <p class="item-intro text-muted">Información detallada sobre el perfil de la Modalidad Corta.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/perfiles/corta-perfil.png" alt="..." />
+                            <button class="btn btn-primary btn-xl text-uppercase mt-4" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Track Modalidad Corta -->
+<div class="portfolio-modal modal fade" id="modalTrackCorta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Track Modalidad Corta</h2>
+                            <p class="item-intro text-muted">Información detallada sobre el track de la Modalidad Corta.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/perfiles/corta-track.png" alt="..." />
+                            <div class="text-center mt-4">
+                                <a class="btn btn-primary btn-xl text-uppercase" href="https://es.wikiloc.com/rutas-carrera-por-montana/cpsm-corta-2025-192999145" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-link me-1"></i>
+                                    Track de la carrera
+                                </a>
+                            </div>
+                            <button class="btn btn-primary btn-xl text-uppercase mt-4" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Botón de volver arriba -->
     <button id="backToTop" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
