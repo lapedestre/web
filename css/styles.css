@@ -759,14 +759,17 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
+.container-data{
+  width: 100%;
+}
 
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm, .container{
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md, .container-sm, .container  {
     max-width: 720px;
   }
 }
@@ -11990,4 +11993,54 @@ section#contact form#contactForm :-ms-input-placeholder {
   width: 250px;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.patrocinador {
+  background-color: rgb(2, 122, 95);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0;
+}
+#portfolio {
+  background-image: url('../assets/img/perfiles/sierra.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 0; /* Ajusta el padding según sea necesario */
+}
+
+#portfolio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(10px); /* Ajusta el nivel de desenfoque según sea necesario */
+  z-index: -1;
+  opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+.modalidad-corta,
+.modalidad-larga {
+  padding: 20px; /* Ajusta el padding según sea necesario */
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  margin-left: 10px; /* Añade margen izquierdo para separar del borde */
+  margin-right: 10px; /* Añade margen derecho para separar del borde */
+  flex: 1 1 100%; /* Permite que los divs se ajusten al 100% del ancho en pantallas pequeñas */
+}
+
+@media (min-width: 768px) {
+  .modalidad-corta,
+  .modalidad-larga {
+      flex: 1 1 48%; /* Permite que los divs se ajusten al 48% del ancho en pantallas grandes */
+      margin-left: 1%; /* Añade margen izquierdo para separar las columnas */
+      margin-right: 1%; /* Añade margen derecho para separar las columnas */
+  }
 }
