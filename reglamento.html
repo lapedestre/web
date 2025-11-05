@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reglamento e Información - Carrera Pedestre Sierra de Marmolejo 2026</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#000000;
+      --muted:#444;
+      --accent:#000;
+      --maxw:900px;
+      --radius:8px;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:20px;
+    }
+    header{
+      margin-bottom:18px;
+    }
+    h1{
+      font-size:20px;
+      margin:0 0 6px 0;
+    }
+    p.lead{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Tabla de contenidos */
+    nav.toc{
+      border-top:1px solid #e6e6e6;
+      border-bottom:1px solid #e6e6e6;
+      padding:12px 0;
+      margin:12px 0 18px 0;
+    }
+    nav.toc a{
+      display:inline-block;
+      margin:6px 12px 6px 0;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:13px;
+    }
+    nav.toc a:hover{ text-decoration:underline; }
+
+    /* detalles / acordeón */
+    details{
+      background:#fff;
+      border:1px solid #e6e6e6;
+      border-radius:var(--radius);
+      padding:12px;
+      margin:12px 0;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    details[open]{
+      border-color:#d2d2d2;
+    }
+    summary{
+      cursor:pointer;
+      outline:none;
+      font-weight:600;
+      font-size:16px;
+      padding:4px 0;
+      list-style:none;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary::before{
+      content: "▶";
+      display:inline-block;
+      width:20px;
+      transform:rotate(0deg);
+      transition: transform .15s ease;
+      margin-right:6px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    details[open] summary::before{
+      transform: rotate(90deg);
+    }
+
+    .section-content{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--text);
+      white-space:pre-wrap;
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:22px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      .wrap{ padding:12px; }
+      h1{ font-size:18px; }
+      summary{ font-size:15px; }
+    }
+    /* Añade estos estilos dentro de la etiqueta <style> en el head */
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Para ocultar el botón de subir cuando estamos arriba del todo */
+#btnTop {
+    display: none;
+}
+
+/* Media query para ajustar en móviles */
+@media (max-width: 520px) {
+    .navigation-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .nav-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Reglamento e Información General — Carrera Pedestre “Sierra de Marmolejo” 2026</h1>
+      <p class="lead">Haz clic en cada apartado para desplegar la información.</p>
+    </header>
+
+    <nav class="toc" aria-label="Índice">
+      <a href="#info">Información general</a>
+      <a href="#fecha">Fecha y hora de salida</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#participantes">Participantes</a>
+      <a href="#inscripciones">Inscripciones</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#condiciones">Condiciones</a>
+      <a href="#penalizaciones">Penalizaciones y material</a>
+      <a href="#trofeos">Trofeos y premios</a>
+      <a href="#dorsales">Dorsales</a>
+      <a href="#localizaciones">Localizaciones</a>
+      <a href="#datos">Datos de las modalidades</a>
+      <a href="#avituallamientos">Avituallamientos</a>
+      <a href="#servicios">Servicios al corredor</a>
+      <a href="#suspension">Suspensión de la carrera</a>
+      <a href="#ecologia">Ecologismo y medio ambiente</a>
+      <a href="#anexo">Anexo I (cadete/juvenil)</a>
+    </nav>
+
+    <!-- Información general -->
+    <details id="info">
+      <summary>Información general</summary>
+      <div class="section-content">
+REGLAMENTO E INFORMACIÓN GENERAL CPSM EDICION 2026.
+
+El C.A. Ave Fénix Marmolejo organiza junto al Exmo. Ayto. de Marmolejo la Carrera Pedestre “Sierra de Marmolejo”.
+
+El Corredor al inscribirse acepta el presente reglamento y se compromete a cumplirlo.
+
+La Carrera Pedestre “Sierra de Marmolejo” es una carrera con Salida y la Meta en el Balneario de Marmolejo (Jaén), discurriendo por el monte público “El Baldío”.
+
+Contacto: infolapedestre@gmail.com
+      </div>
+    </details>
+
+    <!-- Fecha y hora -->
+    <details id="fecha">
+      <summary>Fecha y hora de salida de las pruebas</summary>
+      <div class="section-content">
+FECHA Y HORA DE SALIDA DE LAS PRUEBAS:
+
+<b>TRAIL LARGO:</b> Domingo 15 de febrero de 2026 <b>09:30 H.</b>
+
+<b>TRAIL CORTO:</b> Domingo 15 de febrero de 2026 <b>10:00 H.</b>
+      </div>
+    </details>
+
+    <!-- Modalidades -->
+    <details id="modalidades">
+      <summary>Modalidades</summary>
+      <div class="section-content">
+MODALIDADES
+
+Para esta edición se incluyen dos modalidades de pruebas.
+
+<b>Trail largo: </b>con una distancia aproximada de 24 kilómetros y un desnivel positivo acumulado de 900 metros(900+).
+
+<b>Trail corto: </b>con una distancia aproximada de 13 kilómetros con un desnivel positivo acumulado de unos 450 metros (450+).
+      </div>
+    </details>
+
+    <!-- Participantes -->
+    <details id="participantes">
+      <summary>Participantes</summary>
+      <div class="section-content">
+PARTICIPANTES
+
+<b>Trail largo: </b> Puede participar toda persona mayor de 18 años que así lo desee y que esté preparada físicamente para afrontar el recorrido de la prueba dentro del tiempo establecido por la organización.
+
+<b>Trail corto: </b> Puede participar toda persona mayor de 18 años, MAS la categoría cadete/juvenil (que cumpla 16 o 17 años en 2026), toda la información relativa a su categoría en el ANEXO I que se encuentra al final de este documento, que así lo desee y que esté preparada físicamente para afrontar el recorrido de la prueba dentro del tiempo establecido por la organización.
+
+SE ESTABLECERÁN TIEMPOS DE CORTE EN VARIOS PUNTOS DE LAS DISTANCIAS, TODO CORREDOR QUE NO ENTRE EN EL PLAZO DE TIEMPO QUEDARÁ ELIMINADO DE LA PRUEBA, ENTREGANDO SU DORSAL AL JUEZ QUE SE LO INDIQUE Y QUEDANDO BAJO SU RESPONSABILIDAD EL RETORNO AL PUNTO DE SALIDA/LLEGADA DE LA PRUEBA.
+
+No obstante la organización intentará en todo lo posible facilitarle el regreso.
+      </div>
+    </details>
+
+    <!-- Seguro y responsabilidad -->
+    <details>
+      <summary>Seguro y responsabilidad</summary>
+      <div class="section-content">
+La carrera está cubierta por una póliza de seguro de responsabilidad civil y cada corredor tendrá un seguro de accidentes individual. La Organización no se hace responsable de los accidentes o lesiones que la prueba origine. Los participantes se comprometen a ir debidamente equipados para una carrera pedestre.
+      </div>
+    </details>
+
+    <!-- Inscripciones -->
+    <details id="inscripciones">
+      <summary>Inscripciones</summary>
+      <div class="section-content">
+INSCRIPCIONES
+
+Vía on-line desde la web de Deportime.
+
+Precio de las pruebas:
+
+<b>20 Euros</b> para el Trail Largo.
+
+<b>14 Euros</b> para el trail corto.
+
+Tiempo de inscripciones:
+
+Desde el <b>6 de noviembre de 2025</b> hasta las 23:59 horas del día <b>8 de febrero de 2026</b>.
+
+El número máximo de participantes será de <b>125</b> en cada modalidad.
+
+Si la demanda es alta y se completara alguna modalidad en corto tiempo la organización estudiará la ampliación de las inscripciones.
+
+No se admitirán inscripciones fuera de plazo.
+
+Es posible que el día de la prueba se pueda realizar alguna inscripción adicional, pero no lo podemos asegurar dado que esto depende de muchos factores que en este momento desconocemos.
+
+Cualquier inscripción puede ser cambiada de titular previa información a esta organización <b>hasta 4 días antes de la prueba</b>.
+      </div>
+    </details>
+
+    <!-- Categorías -->
+    <details id="categorias">
+      <summary>Categorías</summary>
+      <div class="section-content">
+CATEGORÍAS
+
+Se establecen las siguientes categorías:
+
+<b>TRAIL LARGO:</b>
+
+<b>General masculino y femenino:</b> tres primeros clasificados.
+
+<b>Senior:</b> Nacidos entre los años 1987 y 1996 de 30 a 39 años
+
+<b>Veteranos/as A:</b> Nacidos/as entre los años 1977 y 1986 incluido(40-49 años)
+
+<b>Veteranos/as B:</b> Nacidos entre los años 1967 y 1976 incluidos (50-59 años)
+
+<b>Veteranos/as C:</b> Nacidos en 1966 o antes ( mayores de 60 años).
+
+<b>Diversidad funcional:</b> masculino y femenino(tres primeros clasificados)
+
+<b>Locales:</b> masculino y femenino: corredores y corredoras residentes en Marmolejo.
+
+De no existir un máximo de cinco corredores por categoría serán incluidos en la categoría inmediatamente anterior.
+
+Los premios individuales no serán acumulativos con otros premios individuales.
+
+En la categoría de discapacitado, se deberá aportar documentación que acredite la discapacidad de al menos un 33%.
+
+<b>TRAIL CORTO:</b>
+
+<b>General masculino y femenino:</b> tres primeros clasificados.
+
+<b>Senior:</b> Nacidos entre los años 1987 y 1996 de 30 a 39 años
+
+<b>Veteranos/as A:</b> Nacidos/as entre los años 1977 y 1986 incluido(40-49 años)
+
+<b>Veteranos/as B:</b> Nacidos entre los años 1967 y 1976 incluidos (50-59 años)
+
+<b>Veteranos/as C:</b> Nacidos en 1966 o antes ( mayores de 60 años).
+
+<b>Diversidad funcional:</b> masculino y femenino(tres primeros clasificados)
+
+<b>Locales:</b> masculino y femenino: corredores y corredoras residentes en Marmolejo.
+
+<b>Categoría juvenil:</b> masculino y femenino: para los nacidos en 2008 y 2009 o cumplan 16 o 17 años antes del día de la prueba(9 de febrero de 2026)
+
+De no existir un máximo de cinco corredores por categoría serán incluidos en la categoría inmediatamente anterior.
+
+Los premios individuales no serán acumulativos con otros premios individuales.
+
+En la categoría de discapacitado, se deberá aportar documentación que acredite la discapacidad de al menos un 33%.
+      </div>
+    </details>
+
+    <!-- Condiciones -->
+    <details id="condiciones">
+      <summary>Condiciones y declaración del participante</summary>
+      <div class="section-content">
+CONDICIONES
+
+Los participantes corren bajo su propia responsabilidad, realizando toda o parte de la prueba.
+
+La organización no se hace responsable de los accidentes o daños sufridos por los corredores ocasionados por el mal uso del material, por no seguir las instrucciones del personal o por no seguir el recorrido establecido. La prueba estará cubierta por los seguros que la legislación marca para este tipo de eventos deportivos.
+
+En caso de retirada se avisará al personal de la organización. En el supuesto de lesión o impedimento para regresar por los propios medios a meta se pedirá ayuda a la organización, que gestionará el rescate.
+
+Como participante, con la inscripción manifiesta encontrarse en una forma física y mental que le permite afrontar el esfuerzo, y asume el riesgo de esta práctica deportiva.
+
+Los participantes, por el hecho de inscribirse libre y voluntariamente, declaran conocer y aceptar plenamente el presente Reglamento. En caso de duda o de surgir alguna situación no reflejada en el mismo, prevalecerá lo que disponga al efecto la Organización.
+
+El participante con la inscripción declara lo siguiente:
+
+“Me encuentro en estado de salud adecuado para participar en LA CARRERA PEDESTRE SIERRA DE MARMOLEJO 2026. Eximo de toda responsabilidad a la organización, patrocinadores u otras instituciones participantes ante cualquier accidente o lesión que pudiera sufrir antes, durante y/o después del evento deportivo, renunciando desde ya a cualquier acción legal en contra de cualquiera de dichas entidades.
+
+Autorizo además a que la organización haga uso de fotos, videos y nombre en la clasificación de la prueba, en los medios de comunicación y/o Internet, sin esperar pago, compensación o retribución alguna por este concepto”.
+
+No se permite el acompañamiento de animales en la celebración de la prueba.
+      </div>
+    </details>
+
+    <!-- Derechos de imagen -->
+    <details>
+      <summary>Derechos de imagen</summary>
+      <div class="section-content">
+DERECHOS DE IMAGEN
+
+Los corredores/as, por el hecho de realizar la inscripción, aceptan la publicación de su nombre y su imagen en cualquier medio de comunicación o Internet, siempre que esta fuese obtenida durante la realización de la prueba, en los momentos previos a ella o a su llegada a meta.
+      </div>
+    </details>
+
+    <!-- Penalizaciones y material -->
+    <details id="penalizaciones">
+      <summary>Penalizaciones y descalificación / Material obligatorio</summary>
+      <div class="section-content">
+Penalizaciones y descalificación
+
+Será motivo de <b>descalificación</b>:
+
+- Abandonar residuos fuera de las papeleras situadas en los avituallamientos.
+- No auxiliar al participante que lo necesite.
+- No llevar el dorsal visible.
+- No realizar el circuito completo.
+- Provocar un accidente voluntariamente.
+- Correr con un dorsal de otro corredor.
+- La ausencia del material obligatorio durante el transcurso de la prueba.
+- No pasar por los puntos de control establecidos por la organización.
+- No respetar el medio ambiente.
+
+Será motivo de <b>penalización</b>:
+
+- Recibir ayuda externa, no sanitaria, fuera de los avituallamientos.
+- Comportamiento no deportivo, irrespetuoso con corredores o miembros de la organización.
+- El abandono sin comunicación a la organización durante la carrera conlleva la imposibilidad de participar en futuras ediciones de la prueba.
+- No respetar las normas de circulación vial en los tramos que discurran por vías abiertas al tráfico.
+- No respetar las indicaciones de los miembros de la organización o de las fuerzas y cuerpos de seguridad.
+
+<b>Material obligatorio:</b>
+
+<b>Trail corto:</b>
+- Vaso flexible o depósito rellenable.
+- Teléfono con batería cargada
+
+<b>Trail largo:</b>
+- Depósito de agua de al menos 500 cl(medio litro)
+- Vaso flexible o depósito rellenable que haga las veces de vaso.
+- Teléfono con batería cargada.
+
+La organización hará todo lo que esté en su mano para minimizar en todo lo posible la huella medioambiental en el transcurso de la carrera por lo que estima que no se proporcionarán vasos de plástico en los puntos de avituallamiento, por tanto es material obligatorio llevar vaso flexible o cualquier otro recipiente que le será rellenado a los corredores en los avituallamientos.
+
+Los recipientes deberán ser portados por los corredores durante todo el recorrido quedando totalmente prohibido abandonarlos durante la prueba siendo estos actos objeto de sanción por parte de la organización.
+
+Material aconsejado:
+
+La organización propondrá un material aconsejado 3 días antes de la carrera en función de las condiciones meteorológicas previstas.
+      </div>
+    </details>
+
+    <!-- Trofeos -->
+    <details id="trofeos">
+      <summary>Trofeos y premios</summary>
+      <div class="section-content">
+TROFEOS Y PREMIOS
+
+Trofeo masculinos y femeninos para:
+
+- Tres primeros clasificados de la general.
+- Tres primeros clasificados de cada categoría
+- Tres primeros clasificados(discapacitados), no incluye cadete/juvenil.
+- Tres primeros clasificados local.
+      </div>
+    </details>
+
+    <!-- Dorsales -->
+    <details id="dorsales">
+      <summary>Dorsales</summary>
+      <div class="section-content">
+DORSALES
+
+Para TRAIL LARGO:
+
+El reparto de dorsales quedará abierto el sábado 14 de febrero de 16:30 a 19:00 (se indicará el lugar con antelación). Así mismo, también podrán ser recogidos el día de la prueba a partir de las 7:30 horas hasta las 9:00 horas en la salida de la prueba(Balneario de Marmolejo).
+
+Para TRAIL CORTO:
+
+El reparto de dorsales quedará abierto el sábado 14 de febrero de 16:30 a 19:00 (se indicará el lugar con antelación). Así mismo, también podrán ser recogidos el día de la prueba a partir de las 8:00 horas hasta las 9:30 horas en la salida de la prueba(Balneario de Marmolejo).
+
+En caso de que exista algún tipo de incidencia con respecto a la inscripción, se le hará saber a los responsables de la carrera para que la solvente el día de la prueba.
+
+Es recomendable llevar el resguardo de haber realizado la inscripción a la hora de retirar el dorsal.
+      </div>
+    </details>
+
+    <!-- Localizaciones -->
+    <details id="localizaciones">
+      <summary>Localizaciones</summary>
+      <div class="section-content">
+LOCALIZACIONES
+
+Salida y Meta: Balneario de Marmolejo
+      </div>
+    </details>
+
+    <!-- Datos modalidades -->
+    <details id="datos">
+      <summary>Datos de las distintas modalidades</summary>
+      <div class="section-content">
+Datos de las distintas modalidades.
+
+Trail Largo: circuito circular de aproximadamente 23 kilómetros con un desnivel positivo acumulado de 900 metros.
+
+Tipo de terreno: dificultad media.
+
+Desnivel: media/alta
+
+Tipo itinerario: circular.
+
+Desnivel: 900+/900-
+
+TRAIL CORTO:
+
+Circuito circular de aproximadamente 13 kilómetros de distancia con un desnivel positivo acumulado de 500 metros.
+
+Tipo de terreno: dificultad fácil.
+
+Desnivel: media
+
+Tipo itinerario: circular.
+
+Desnivel: 500+/500-
+      </div>
+    </details>
+
+    <!-- Avituallamientos -->
+    <details id="avituallamientos">
+      <summary>Avituallamientos</summary>
+      <div class="section-content">
+AVITUALLAMIENTOS
+
+La organización dispondrá puntos de avituallamiento sólido/líquido que estime oportuno en todo los recorridos informando con antelación al comienzo de la prueba del número y punto kilométrico en los que se encuentran y actualizando el reglamento con la información relevante días antes de la prueba para conocimiento de los participantes.
+
+Habrá bolsas de basura para depositar los desperdicios que se generen en el avituallamiento, se ruega a los atletas que hagan uso responsable en los avituallamientos.
+      </div>
+    </details>
+
+    <!-- Servicios al corredor -->
+    <details id="servicios">
+      <summary>Servicios al corredor</summary>
+      <div class="section-content">
+SERVICIOS AL CORREDOR
+
+Se ofrecerá al inicio de la prueba una bolsa de corredor incluyendo camiseta conmemorativa y otros regalos que la organización está gestionando.
+
+En la Salida/Meta <b>NO</b>se dispone de servicio de Guardarropa,si algún participante necesitara que se guarde su bolsa la organización ,voluntariamente, hara las gestiones que crea oportunas.
+
+Aparcamientos del balneario y anexos(1 aparcamiento a 50 metros de salida/meta, 1 aparcamiento a 100 metros de salida/meta y 2 aparcamientos a 200 metros de la salida/meta).
+
+Avituallamientos con sólido y líquido durante la prueba.
+
+Comida a la llegada en meta.
+      </div>
+    </details>
+
+    <!-- Suspensión -->
+    <details id="suspension">
+      <summary>Suspensión de la carrera</summary>
+      <div class="section-content">
+SUSPENSIÓN DE LA CARRERA
+
+El evento solo podrá ser suspendido porque la autoridad así lo dictamine o por motivos de seguridad (peligro para los corredores), ningún otro factor incluyendo los climatológicos podrán hacer que se suspenda la prueba.
+      </div>
+    </details>
+
+    <!-- Ecologismo -->
+    <details id="ecologia">
+      <summary>Ecologismo y medio ambiente</summary>
+      <div class="section-content">
+Ecologismo y medio ambiente.
+
+Se deben seguir las pautas de comportamiento habituales en los espacios naturales:
+
+NO dejar residuos
+
+NO encender fuego
+
+NO salirse del recorrido señalizado
+
+Se reducirá al mínimo el uso de plásticos en el monte: avituallamientos, señalización.
+
+La organización utilizará en lo posible material reutilizable o reciclable.
+
+LA INSCRIPCIÓN EN LA PRUEBA CONLLEVA LA ACEPTACIÓN AUTOMÁTICA DE SU REGLAMENTO.
+      </div>
+    </details>
+
+    <!-- Anexo I -->
+    <details id="anexo">
+      <summary>Anexo I — Categoría cadete/juvenil</summary>
+      <div class="section-content">
+ANEXO I
+
+Categoría cadete/juvenil
+
+Para esta edición se establece de manera extraordinaria una categoría cadete juvenil que incluye a las personas nacidas en los años 2008 y 2009 o que cumplan 16 y 17 años antes del día de la prueba( 15 de febrero de 2026).
+
+Se establecen SÓLO las modalidades masculino y femenino.
+
+Solo podrán realizar la prueba corta, en ningún momento podrán hacer el recorrido de la prueba larga.
+
+Para su participación es necesario inscripción en la modalidad corta y haber rellenado y entregado a la organización, la autorización de padres/madre o tutor antes de la prueba, no pudiendo participar en ella si no se tiene constancia de dicha autorización por parte de la organización antes de la hora de salida en la prueba.
+
+<b>EN CASO DE NO TENER LA AUTORIZACIÓN, NO SE REEMBOLSARÁ EL DINERO DE LA INSCRIPCIÓN.</b>
+
+Por tanto se ruega que una vez rellena la inscripción se envíe a infolapedestre@gamil.com la autorización, que estará disponible en la web de la carrera y se publicará en las redes de la misma para hacer uso de ella. En última opción se podrá presentar, impresa y rellena, antes del inicio de la prueba corta a los miembros de la organización para dar el visto bueno.
+
+Se harán entrega de premios a los tres primeros clasificados en cada modalidad(masculino y femenino).
+
+Si algún participante de esta modalidad consiguiera entrar entre los tres primeros clasificados , en la general, de la prueba corta subirán al podium absoluto, renunciando a la categoría cadete/juvenil.
+
+Los participantes de esta modalidad se acogerán al reglamento de la carrera en cuanto a material obligatorio y aceptación de las normas que rigen la organización de la prueba.
+
+Las penalizaciones y advertencias serán las mismas que las demás personas participantes.
+
+EXONERACIÓN DE RESPONSABILIDAD:
+
+Al aceptar este reglamento eximo a los organizadores de la Carrera CPSM 2026, incluyendo a la organización, patrocinadores, voluntarios y demás colaboradores, de cualquier responsabilidad por lesiones, daños materiales o perjuicios que puedan surgir durante la participación de mi hijo/a en este evento.
+
+USO DE IMAGEN:
+
+Autorizo el uso de fotografías, videos u otro material audiovisual en el que aparezca mi hijo/a durante el evento, con fines promocionales o de difusión del mismo, sin que ello implique derecho a compensación económica alguna.
+
+Contacto: infolapedestre@gmail.com
+      </div>
+    </details>
+
+    <footer>
+      <p class="small">Última actualización: 5 de noviembre de 2025.</p>
+  </div>
+<div class="navigation-buttons">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnTop" class="nav-btn">
+        ↑ Subir
+    </button>
+    <a href="index.html" class="nav-btn">
+        Inicio
+    </a>
+</div>
+<script>
+// Cuando el usuario hace scroll, mostrar/ocultar el botón
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("btnTop").style.display = "block";
+    } else {
+        document.getElementById("btnTop").style.display = "none";
+    }
+};
+</script>
+</body>
+</html>
