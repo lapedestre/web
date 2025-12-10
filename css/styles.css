@@ -12013,12 +12013,26 @@ section#contact form#contactForm :-ms-input-placeholder {
   padding-bottom: 1rem;
 }
 .patrocinador {
-  background-color: rgb(2, 122, 95);
+  background-color: rgb(255, 255, 255);
   width: 100%;
-  padding: 0;
+  padding: 5px 0;
   margin: 0;
   position: relative;
   left: 0;
+}
+
+.patrocinador img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .patrocinador img {
+    max-width: 90%;
+  }
 }
 #portfolio {
   background-image: url('../assets/img/perfiles/sierra.jpg'); /* Ruta de la imagen de fondo */
