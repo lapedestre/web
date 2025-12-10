@@ -11439,6 +11439,12 @@ p {
 .page-section {
   padding: 6rem 0;
 }
+
+/* Reducir padding para secciones de logos */
+#team, #clients {
+  padding: 2rem 0 !important;
+}
+
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
@@ -12054,6 +12060,116 @@ section#contact form#contactForm :-ms-input-placeholder {
   filter: blur(10px); /* Ajusta el nivel de desenfoque según sea necesario */
   z-index: -1;
   opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+/* Carousel infinito para logos */
+.logos-slider {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.logos-slide {
+  display: flex;
+  gap: 40px;
+  animation: scroll 30s linear infinite;
+}
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+/* Animación de izquierda a derecha para Team */
+#team .logos-slide {
+  animation: scrollRight 30s linear infinite;
+}
+
+/* Animación de derecha a izquierda para Clients */
+#clients .logos-slide {
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Estilos para team members en el slider */
+.logos-slider .team-member {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.logos-slider .team-member .img-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+}
+
+.logos-slider .team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logos-slider .team-member h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Estilos para client logos en el slider */
+.client-logo {
+  flex: 0 0 auto;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logos-slider .team-member {
+    width: 150px;
+  }
+  
+  .logos-slider .team-member .img-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .client-logo {
+    width: 180px;
+  }
+  
+  .client-logo img {
+    max-height: 80px;
+  }
+  
+  .logos-slide {
+    gap: 30px;
+  }
 }
 
 .modalidad-corta,
