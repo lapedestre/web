@@ -12446,9 +12446,6 @@ section#contact form#contactForm .form-control:focus { border-color: var(--color
   .page-section { padding: 3.5rem 0; }
 }
 header.masthead {
-  background-image:
-    linear-gradient(rgba(20, 35, 59, 0.35), rgba(20, 35, 59, 0.6)),
-    url("../assets/img/headerEd26.png");
   min-height: 85vh;
   min-height: 85svh;
 }
@@ -12637,4 +12634,33 @@ header.masthead {
   height: 80px;
   width: auto;
   max-width: 100%;
+}
+
+/* Tarjetas de 3 columnas (tablet/escritorio): títulos y botones alineados entre columnas */
+@media (min-width: 768px) {
+  .row.text-center > [class*="col-md-4"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .row.text-center > [class*="col-md-4"] > h4 {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+  }
+  .row.text-center > [class*="col-md-4"] > .text-center {
+    width: 100%;
+    margin-top: auto;
+  }
+  .row.text-center > [class*="col-md-4"] .btn-xl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
 }
