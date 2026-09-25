@@ -12192,3 +12192,149 @@ section#contact form#contactForm :-ms-input-placeholder {
       margin-right: 1%; /* Añade margen derecho para separar las columnas */
   }
 }
+/* Cuenta atrás */
+.cuenta-atras {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1rem 0 0;
+}
+
+/* Datos clave (mobile first: 2 columnas, 4 en escritorio) */
+.datos-clave {
+  padding: 1.5rem 0;
+  background-color: #f8f9fa;
+}
+.datos-clave .dato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+.datos-clave .dato i {
+  font-size: 1.5rem;
+  color: #ffc800;
+}
+.datos-clave .dato span {
+  color: #6c757d;
+}
+
+/* Imágenes de perfil/track: scroll horizontal en móvil para poder leerlas */
+@media (max-width: 767.98px) {
+  .portfolio-modal .img-zoom {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+  }
+  .portfolio-modal .img-zoom img {
+    max-width: none;
+    width: 700px;
+    margin-bottom: 0;
+  }
+  .portfolio-modal .img-zoom::after {
+    content: "Desliza para ver la imagen completa";
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+    position: sticky;
+    left: 0;
+  }
+  .portfolio-modal .modal-content h2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Preguntas frecuentes (question.html): acordeón nativo, mobile first */
+.faq {
+  max-width: 800px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.faq .faq-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.faq .faq-header img {
+  width: 80px;
+  height: 80px;
+}
+.faq .faq-header h1 {
+  font-size: 1.5rem;
+  margin: 0.75rem 0 0.25rem;
+}
+.faq details {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+}
+.faq summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 0.75rem 0;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.faq details[open] summary::after {
+  content: "−";
+}
+.faq details p,
+.faq details ul {
+  font-size: 1rem;
+}
+.faq .faq-back {
+  margin-top: 1.5rem;
+}
+
+/* Barra de acciones fija en móvil */
+.cta-movil {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom));
+  background-color: #fff;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+.cta-movil .btn {
+  flex: 1 1 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 767.98px) {
+  body#page-top {
+    padding-bottom: 4.5rem;
+  }
+  .back-to-top {
+    bottom: 5.5rem;
+  }
+}

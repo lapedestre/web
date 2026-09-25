@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//La Pedestre//CPSM 2027//ES
+BEGIN:VEVENT
+UID:cpsm-2027@lapedestre.github.io
+DTSTAMP:20260925T000000Z
+DTSTART:20270214T083000Z
+DTEND:20270214T120000Z
+SUMMARY:Carrera Pedestre Sierra de Marmolejo 2027
+LOCATION:Balneario de Marmolejo\, Marmolejo (Jaén)
+DESCRIPTION:Trail largo 09:30 h - Trail corto 10:00 h. Más info: https://lapedestre.github.io/web/
+END:VEVENT
+END:VCALENDAR
