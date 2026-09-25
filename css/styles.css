@@ -12338,3 +12338,196 @@ section#contact form#contactForm :-ms-input-placeholder {
     bottom: 5.5rem;
   }
 }
+
+/* ==========================================================================
+   Tema visual (paleta basada en la foto de portada y los logos)
+   ========================================================================== */
+:root {
+  --color-marca: #4471b2;
+  --color-marca-oscuro: #2f5288;
+  --color-noche: #14233b;
+  --color-sierra: #4a6b3f;
+  --color-accion: #c2410c;
+  --color-accion-oscuro: #9a3412;
+  --color-acento-claro: #a9c3ea;
+  --color-fondo: #f4f6f8;
+  --bs-light: #f4f6f8;
+  --bs-light-rgb: 244, 246, 248;
+  --bs-body-font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body { font-family: var(--bs-body-font-family); }
+p { line-height: 1.6; }
+a { color: var(--color-marca); }
+a:hover { color: var(--color-marca-oscuro); }
+
+/* Botones */
+.btn:not(.btn-social) { border-radius: 0.5rem; }
+.btn-primary,
+.btn-primary:disabled,
+.btn-primary.disabled {
+  color: #fff;
+  background-color: var(--color-accion);
+  border-color: var(--color-accion);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #fff;
+  background-color: var(--color-accion-oscuro);
+  border-color: var(--color-accion-oscuro);
+}
+.btn-secundario {
+  color: var(--color-marca-oscuro);
+  background-color: transparent;
+  border: 2px solid var(--color-marca);
+}
+.btn-secundario:hover,
+.btn-secundario:focus,
+.btn-secundario:active {
+  color: #fff;
+  background-color: var(--color-marca);
+  border-color: var(--color-marca);
+}
+.btn-dark {
+  background-color: var(--color-noche);
+  border-color: var(--color-noche);
+}
+.btn:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-acento-claro);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.btn-xl { min-height: 48px; }
+@media (max-width: 767.98px) {
+  .btn-xl {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  .button-container { gap: 12px; }
+  .button-container .btn {
+    width: 100%;
+    max-width: 22rem;
+    margin-bottom: 0;
+  }
+}
+
+/* Fondos y acentos */
+#mainNav,
+#mainNav.navbar-shrink { background-color: var(--color-noche); }
+@media (min-width: 992px) {
+  #mainNav { background-color: transparent; }
+  #mainNav.navbar-shrink { background-color: var(--color-noche); }
+}
+#mainNav .navbar-brand { color: #fff; }
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover { color: var(--color-acento-claro); }
+.masthead#fecha,
+#fecha { background: var(--color-noche) !important; }
+section#contact { background-color: var(--color-noche); }
+section#contact form#contactForm .form-control:focus { border-color: var(--color-acento-claro); }
+.circle { color: var(--color-noche) !important; }
+.back-to-top { background-color: var(--color-accion); }
+.back-to-top:hover { background-color: var(--color-accion-oscuro); }
+.datos-clave { background-color: var(--color-fondo); }
+.datos-clave .dato i { color: var(--color-sierra); }
+.datos-clave .dato { border-top: 3px solid var(--color-marca); }
+
+/* Tipografía */
+.page-section h2.section-heading {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+}
+
+/* Ritmo y espacios en móvil */
+@media (max-width: 767.98px) {
+  .page-section { padding: 3.5rem 0; }
+}
+header.masthead {
+  background-image:
+    linear-gradient(rgba(20, 35, 59, 0.35), rgba(20, 35, 59, 0.6)),
+    url("../assets/img/headerEd26.png");
+  min-height: 85vh;
+  min-height: 85svh;
+}
+
+/* Franja de fecha con jerarquía */
+#fecha .fecha-titulo {
+  font-size: clamp(1.5rem, 7vw, 2.25rem);
+  letter-spacing: 0.05rem;
+  margin: 0.5rem 0;
+}
+#fecha .fecha-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+#fecha .fecha-chips span {
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--color-acento-claro);
+  border-radius: 999px;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+#fecha .fecha-lema {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.85;
+}
+#fecha .cuenta-atras { color: var(--color-acento-claro); }
+
+/* Pulido */
+.datos-clave .dato,
+.faq details,
+.formulario { border-radius: 0.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  .fa-shake { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Barra de marca para páginas secundarias (question.html) */
+.barra-marca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-noche);
+}
+.barra-marca img { height: 1.75rem; display: block; }
+.barra-marca div { display: flex; gap: 0.25rem; }
+.barra-marca div a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.barra-marca div a:hover { color: var(--color-acento-claro); }
+.faq .faq-header { margin-top: 1.5rem; }
+
+/* Logo de la edición (el mismo de la portada) en blanco sobre fondos oscuros */
+#mainNav .navbar-brand img,
+.barra-marca img {
+  height: 2.5rem;
+  filter: brightness(0) invert(1);
+}
+@media (min-width: 992px) {
+  #mainNav .navbar-brand img { height: 3rem; }
+  #mainNav.navbar-shrink .navbar-brand img { height: 2.5rem; }
+}
+
+/* Tarjetas de "Carrera individual" / "Trofeo": iconos más pequeños y separación en móvil */
+@media (max-width: 767.98px) {
+  .fa-stack.fa-4x { font-size: 3rem; }
+  .row.text-center > [class*="col-md-4"] { margin-bottom: 2.5rem; }
+  .row.text-center > [class*="col-md-4"]:last-child { margin-bottom: 0; }
+}

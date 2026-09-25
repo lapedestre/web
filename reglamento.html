@@ -165,9 +165,53 @@
         font-size: 12px;
     }
 }
+    /* Marca */
+    :root{ --marca:#4471b2; --noche:#14233b; }
+    .barra-marca{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:8px 16px;
+      background:var(--noche);
+    }
+    .barra-marca img{ height:40px; display:block; filter:brightness(0) invert(1); }
+    .barra-marca a.volver{
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
+      padding:0 12px;
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+      text-transform:uppercase;
+      text-decoration:none;
+    }
+    .barra-marca a.volver:hover{ color:#a9c3ea; }
+    h1{ color:var(--noche); }
+    nav.toc a:hover{ color:var(--marca); }
+    summary::before{ color:var(--marca); }
+    details[open]{ border-color:var(--marca); }
+    .nav-btn{
+      width:50px; height:50px; padding:0;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:50%; background-color:#c2410c; color:#fff;
+    }
+    .nav-btn:hover{ background-color:#9a3412; }
+    .nav-btn svg{ width:20px; height:20px; fill:currentColor; }
+    #btnTop{ display:none; }
+    a:focus-visible, summary:focus-visible, .nav-btn:focus-visible{ outline:3px solid var(--marca); outline-offset:2px; }
+    .toc-menu{ border:0; padding:0; margin:0; box-shadow:none; background:transparent; }
+    .toc-menu summary{ font-size:15px; }
+    .toc-links{ display:flex; flex-direction:column; padding-bottom:6px; }
+    .toc-links a{ margin:0; border-top:1px solid #eee; }
+    @media (min-width:700px){ .toc-links{ display:grid; grid-template-columns:1fr 1fr; column-gap:12px; } }
   </style>
 </head>
 <body>
+  <nav class="barra-marca" aria-label="Navegación">
+    <a href="index.html" aria-label="Volver a la página de la carrera"><img src="assets/img/logos/Logo26Calado.svg" alt="La Pedestre"></a>
+    <a class="volver" href="index.html">Inicio</a>
+  </nav>
   <div class="wrap">
     <header>
       <h1>Reglamento e Información General — Carrera Pedestre “Sierra de Marmolejo” 2027</h1>
@@ -175,6 +219,9 @@
     </header>
 
     <nav class="toc" aria-label="Índice">
+      <details class="toc-menu">
+        <summary>Ir a un apartado</summary>
+        <div class="toc-links">
       <a href="#info">Información general</a>
       <a href="#fecha">Fecha y hora de salida</a>
       <a href="#modalidades">Modalidades</a>
@@ -192,6 +239,8 @@
       <a href="#suspension">Suspensión de la carrera</a>
       <a href="#ecologia">Ecologismo y medio ambiente</a>
       <a href="#anexo">Anexo I (cadete/juvenil)</a>
+      </div>
+      </details>
     </nav>
 
     <!-- Información general -->
@@ -610,22 +659,40 @@ Contacto: infolapedestre@gmail.com
       <p class="small">Última actualización: 5 de noviembre de 2025.</p>
   </div>
 <div class="navigation-buttons">
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnTop" class="nav-btn">
-        ↑ Subir
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnTop" class="nav-btn" title="Volver arriba" aria-label="Volver arriba">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
     </button>
-    <a href="index.html" class="nav-btn">
-        Inicio
+    <a href="index.html" class="nav-btn" title="Inicio" aria-label="Inicio">
+        <svg viewBox="0 0 576 512" aria-hidden="true"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40V360c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v112c0 22.1-17.9 40-40 40H128.1c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8V287.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
     </a>
 </div>
 <script>
-// Cuando el usuario hace scroll, mostrar/ocultar el botón
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("btnTop").style.display = "block";
+        document.getElementById("btnTop").style.display = "flex";
     } else {
         document.getElementById("btnTop").style.display = "none";
     }
 };
+
+var apartados = document.querySelectorAll(".wrap > details");
+apartados.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+        if (!d.open) return;
+        apartados.forEach(function (o) { if (o !== d) o.open = false; });
+        d.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+});
+
+document.querySelectorAll(".toc-links a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+        var destino = document.querySelector(a.getAttribute("href"));
+        if (!destino) return;
+        e.preventDefault();
+        a.closest(".toc-menu").open = false;
+        destino.open = true;
+    });
+});
 </script>
 </body>
 </html>
