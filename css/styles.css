@@ -12336,6 +12336,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   .back-to-top {
     bottom: 5.5rem;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+  }
+  .back-to-top:active,
+  .back-to-top:focus-visible {
+    opacity: 1;
   }
 }
 
@@ -12540,6 +12546,8 @@ header.masthead {
   gap: var(--gap);
   overflow: hidden;
   padding: 0.75rem 0 1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
 }
 .colaboradores-grupo {
   display: flex;
