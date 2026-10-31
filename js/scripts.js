@@ -70,3 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Cierra el menú móvil al tocar fuera de la barra de navegación
+document.addEventListener('click', function (event) {
+    const menu = document.getElementById('navbarResponsive');
+    if (!menu || !menu.classList.contains('show') || event.target.closest('#mainNav')) {
+        return;
+    }
+    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+});
