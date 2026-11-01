@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reglamento Trofeo por Equipos - Carrera Pedestre Sierra de Marmolejo 2027</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#000000;
+      --muted:#444;
+      --maxw:900px;
+      --radius:8px;
+      --marca:#4471b2;
+      --noche:#14233b;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:20px;
+    }
+    header{ margin-bottom:18px; }
+    h1{
+      font-size:20px;
+      margin:0 0 6px 0;
+      color:var(--noche);
+    }
+    p.lead{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Tabla de contenidos */
+    nav.toc{
+      border-top:1px solid #e6e6e6;
+      border-bottom:1px solid #e6e6e6;
+      padding:12px 0;
+      margin:12px 0 18px 0;
+    }
+    nav.toc a{
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
+      padding:0 10px;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+    }
+    nav.toc a:hover{ text-decoration:underline; color:var(--marca); }
+
+    /* detalles / acordeón */
+    details{
+      background:#fff;
+      border:1px solid #e6e6e6;
+      border-radius:var(--radius);
+      padding:12px;
+      margin:12px 0;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    details[open]{ border-color:var(--marca); }
+    summary{
+      cursor:pointer;
+      outline:none;
+      font-weight:600;
+      font-size:16px;
+      padding:10px 0;
+      list-style:none;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary::before{
+      content: "▶";
+      display:inline-block;
+      width:20px;
+      transform:rotate(0deg);
+      transition: transform .15s ease;
+      margin-right:6px;
+      color:var(--marca);
+      font-size:12px;
+    }
+    details[open] summary::before{ transform: rotate(90deg); }
+
+    .section-content{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--text);
+      white-space:pre-wrap;
+    }
+    .small{ font-size:13px; color:var(--muted); }
+    footer{ margin-top:22px; font-size:13px; color:var(--muted); }
+
+    .barra-marca{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:8px 16px;
+      background:var(--noche);
+    }
+    .barra-marca img{ height:40px; display:block; filter:brightness(0) invert(1); }
+    .barra-marca a.volver{
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
+      padding:0 12px;
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+      text-transform:uppercase;
+      text-decoration:none;
+    }
+    .barra-marca a.volver:hover{ color:#a9c3ea; }
+    .aviso{
+      border:1px solid #c2410c;
+      border-left:4px solid #c2410c;
+      background:#fff4ec;
+      border-radius:var(--radius);
+      padding:12px 14px;
+      margin:0 0 18px 0;
+      font-size:14px;
+      color:var(--text);
+    }
+
+    .navigation-buttons{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      z-index:1000;
+    }
+    .nav-btn{
+      width:50px; height:50px; padding:0;
+      display:flex; align-items:center; justify-content:center;
+      border:none; border-radius:50%;
+      background-color:#c2410c; color:#fff;
+      cursor:pointer; text-decoration:none;
+      transition:background-color .3s;
+    }
+    .nav-btn:hover{ background-color:#9a3412; }
+    .nav-btn svg{ width:20px; height:20px; fill:currentColor; }
+    #btnTop{ display:none; }
+    a:focus-visible, summary:focus-visible, .nav-btn:focus-visible{ outline:3px solid var(--marca); outline-offset:2px; }
+    .toc-menu{ border:0; padding:0; margin:0; box-shadow:none; background:transparent; }
+    .toc-menu summary{ font-size:15px; }
+    .toc-links{ display:flex; flex-direction:column; padding-bottom:6px; }
+    .toc-links a{ margin:0; border-top:1px solid #eee; }
+
+    @media (min-width:700px){ .toc-links{ display:grid; grid-template-columns:1fr 1fr; column-gap:12px; } }
+    @media (max-width:520px){
+      .wrap{ padding:12px; }
+      h1{ font-size:18px; }
+      summary{ font-size:15px; }
+    }
+    /* Barra de acciones fija (todos los tamaños) */
+    body{ padding-bottom:calc(76px + env(safe-area-inset-bottom)); }
+    .barra-acciones{
+      position:fixed; left:0; right:0; bottom:0; z-index:999;
+      display:flex; justify-content:center; gap:10px;
+      padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+      background:#fff;
+      box-shadow:0 -2px 6px rgba(0,0,0,0.15);
+    }
+    .barra-acciones a{
+      flex:1 1 0; max-width:320px; min-height:44px;
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      padding:0 14px; border-radius:var(--radius);
+      font-size:14px; font-weight:700; text-transform:uppercase; text-decoration:none;
+    }
+    .barra-acciones .principal{ background:#c2410c; color:#fff; }
+    .barra-acciones .principal:hover{ background:#9a3412; }
+    .barra-acciones .secundario{ background:#e8eef7; color:var(--noche); }
+    .barra-acciones .secundario:hover{ background:#d3deef; }
+    .barra-acciones a:focus-visible{ outline:3px solid var(--marca); outline-offset:2px; }
+    .navigation-buttons{ bottom:90px; }
+  </style>
+</head>
+<body>
+  <nav class="barra-marca" aria-label="Navegación">
+    <a href="index.html" aria-label="Volver a la página de la carrera"><img src="assets/img/logos/Logo26Calado.svg" alt="La Pedestre"></a>
+    <a class="volver" href="index.html#trofeo">Volver al trofeo</a>
+  </nav>
+  <div class="wrap">
+    <header>
+      <h1>Reglamento Trofeo por Equipos para Clubes — Carrera Pedestre “Sierra de Marmolejo” 2027</h1>
+      <p class="lead">Haz clic en cada apartado para desplegar la información.</p>
+    </header>
+
+    <p class="aviso"><b>IMPORTANTE:</b> el trofeo por equipos es únicamente para la distancia larga (trail largo).</p>
+
+    <nav class="toc" aria-label="Índice">
+      <details class="toc-menu">
+        <summary>Ir a un apartado</summary>
+        <div class="toc-links">
+          <a href="#general">Información general</a>
+          <a href="#modalidades">Modalidades y composición</a>
+          <a href="#clasificacion">Clasificación</a>
+          <a href="#inscripcion">Inscripción de equipos</a>
+          <a href="#empates">Ganador y empates</a>
+          <a href="#trofeos">Trofeos</a>
+        </div>
+      </details>
+    </nav>
+
+    <!-- Información general -->
+    <details id="general">
+      <summary>Información general</summary>
+      <div class="section-content">
+TROFEO POR EQUIPOS PARA CLUBES — EDICIÓN 2027
+
+Los corredores que participen por equipos optan a la clasificación general, a las categorías por edad de la carrera, además de los premios del Trofeo por Equipos.
+
+El TROFEO POR EQUIPOS busca potenciar la cooperación y participación de los equipos participantes en la CPSM.
+
+Los equipos estarán formados por corredores <b>previamente inscritos individualmente</b> a la carrera CPSM del año 2027, en la distancia larga.
+      </div>
+    </details>
+
+    <!-- Modalidades y composición -->
+    <details id="modalidades">
+      <summary>Modalidades y composición de los equipos</summary>
+      <div class="section-content">
+MODALIDADES: <b>MASCULINO, FEMENINO y PAREJA MIXTA.</b>
+
+<b>A)</b> Los equipos masculinos y femeninos pueden estar formados por un mínimo de 3 y un máximo de 7 componentes de la categoría absoluto masculino y absoluto femenino respectivamente, que serán inscritos oficialmente con una fecha tope de 72 horas antes de la celebración de la carrera. Pasada esta fecha queda cerrada la posibilidad de inscripción y modificación de equipos.
+
+<b>B)</b> En la modalidad mixta por parejas, el equipo estará formado por un integrante masculino y otro femenino, que serán inscritos oficialmente con una fecha tope de 72 horas antes de la celebración de la carrera. Pasada esta fecha queda cerrada la posibilidad de inscripción y modificación de equipos.
+
+<b>C)</b> Un/una atleta solo podrá ser inscrito en una modalidad.
+
+<b>G)</b> Se permiten equipos que no estén formados por miembros de clubes.
+
+<b>H)</b> Para esta edición NO se permitirá la inscripción de varios equipos por club.
+      </div>
+    </details>
+
+    <!-- Clasificación -->
+    <details id="clasificacion">
+      <summary>Clasificación</summary>
+      <div class="section-content">
+<b>D)</b> Para entrar en la clasificación de las modalidades masculino y femenino, deberán finalizar la carrera como mínimo 3 componentes del mismo equipo, inscritos en el Trofeo por Equipos. No es necesario que entren juntos en meta. Puntúan los 3 primeros componentes del equipo en cruzar la línea de meta. No se tendrá en cuenta el tiempo ni el puesto de llegada de ningún otro componente del equipo.
+
+<b>E)</b> La clasificación de cada equipo se obtendrá por la suma de las posiciones de llegada a meta de sus tres primeros componentes. La posición de llegada de cada componente es el puesto con el que cruza la línea de meta en la carrera. Resultará ganador el equipo con la menor puntuación.
+
+Los equipos formados por más de 3 componentes podrán perder integrantes durante la carrera por cualquier circunstancia (abandono, descuelgue, etc.), siempre que finalicen al menos 3 componentes. Si un equipo no consigue que finalicen 3 componentes, no aparecerá en la clasificación.
+
+<b>F)</b> En la modalidad pareja mixta, la clasificación se obtendrá por la suma de las posiciones de llegada a meta de sus dos componentes. No es necesario que entren juntos en meta. Si alguno de los dos no finaliza la carrera, la pareja no aparecerá en la clasificación.
+      </div>
+    </details>
+
+    <!-- Inscripción -->
+    <details id="inscripcion">
+      <summary>Inscripción de equipos</summary>
+      <div class="section-content">
+<b>I)</b> Los interesados en participar en dicho trofeo presentarán su lista de deportistas representantes al organizador, utilizando para ello el formulario establecido por la organización de la carrera. Dicho formulario estará certificado por el club participante a través de la firma del/la presidente/a o el/la secretario/a general, o por una persona que certificará y representará al grupo y que responderá ante la organización de la carrera cuando sea requerido, siempre dentro del periodo de tiempo establecido y sin posibilidad de hacerlo pasada la fecha límite.
+      </div>
+    </details>
+
+    <!-- Ganador y empates -->
+    <details id="empates">
+      <summary>Ganador y desempates</summary>
+      <div class="section-content">
+<b>J)</b> La posición final de cada equipo en la clasificación vendrá determinada por su puntuación (suma de las posiciones de llegada a meta de sus tres primeros componentes o, en la modalidad mixta, de los dos componentes de la pareja), cumpliendo los requisitos de este reglamento. El EQUIPO o PAREJA MIXTA que obtenga la menor puntuación en su modalidad será proclamado ganador del Trofeo por Equipos en la misma.
+
+En caso de empate a puntos, ganará el equipo o la pareja cuyo mejor componente haya cruzado antes la línea de meta.
+
+En caso de duda sobre el orden de llegada de varios equipos, decidirán los jueces de la organización.
+      </div>
+    </details>
+
+    <!-- Trofeos -->
+    <details id="trofeos">
+      <summary>Trofeos</summary>
+      <div class="section-content">
+TROFEOS PARA:
+
+- Tres primeros clasificados equipos masculino.
+- Tres primeros clasificados equipos femenino.
+- Tres primeros clasificados pareja mixta.
+      </div>
+    </details>
+
+    <footer>
+      <p class="small">Última actualización: 1 de noviembre de 2026.</p>
+    </footer>
+  </div>
+<!-- TODO: sustituir href="#" y onclick por las URL del PDF del reglamento del trofeo y del formulario de equipos (con download) cuando estén publicados -->
+<div class="barra-acciones">
+    <a class="principal" href="#" onclick="return false;">Descargar formulario</a>
+    <a class="secundario" href="#" onclick="return false;">Descargar reglamento</a>
+</div>
+<div class="navigation-buttons">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnTop" class="nav-btn" title="Volver arriba" aria-label="Volver arriba">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+    </button>
+    <a href="index.html#trofeo" class="nav-btn" title="Volver al trofeo" aria-label="Volver al trofeo">
+        <svg viewBox="0 0 576 512" aria-hidden="true"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40V360c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v112c0 22.1-17.9 40-40 40H128.1c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8V287.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+    </a>
+</div>
+<script>
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("btnTop").style.display = "flex";
+    } else {
+        document.getElementById("btnTop").style.display = "none";
+    }
+};
+
+var apartados = document.querySelectorAll(".wrap > details");
+apartados.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+        if (!d.open) return;
+        apartados.forEach(function (o) { if (o !== d) o.open = false; });
+        d.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+});
+
+document.querySelectorAll(".toc-links a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+        var destino = document.querySelector(a.getAttribute("href"));
+        if (!destino) return;
+        e.preventDefault();
+        a.closest(".toc-menu").open = false;
+        destino.open = true;
+    });
+});
+</script>
+</body>
+</html>

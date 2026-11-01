@@ -215,6 +215,27 @@
     .toc-links{ display:flex; flex-direction:column; padding-bottom:6px; }
     .toc-links a{ margin:0; border-top:1px solid #eee; }
     @media (min-width:700px){ .toc-links{ display:grid; grid-template-columns:1fr 1fr; column-gap:12px; } }
+    /* Barra de acciones fija (todos los tamaños) */
+    body{ padding-bottom:calc(76px + env(safe-area-inset-bottom)); }
+    .barra-acciones{
+      position:fixed; left:0; right:0; bottom:0; z-index:999;
+      display:flex; justify-content:center; gap:10px;
+      padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+      background:#fff;
+      box-shadow:0 -2px 6px rgba(0,0,0,0.15);
+    }
+    .barra-acciones a{
+      flex:1 1 0; max-width:320px; min-height:44px;
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      padding:0 14px; border-radius:var(--radius);
+      font-size:14px; font-weight:700; text-transform:uppercase; text-decoration:none;
+    }
+    .barra-acciones .principal{ background:#c2410c; color:#fff; }
+    .barra-acciones .principal:hover{ background:#9a3412; }
+    .barra-acciones .secundario{ background:#e8eef7; color:var(--noche); }
+    .barra-acciones .secundario:hover{ background:#d3deef; }
+    .barra-acciones a:focus-visible{ outline:3px solid var(--marca); outline-offset:2px; }
+    .navigation-buttons{ bottom:90px; }
   </style>
 </head>
 <body>
@@ -629,6 +650,10 @@ LA INSCRIPCIÓN EN LA PRUEBA CONLLEVA LA ACEPTACIÓN AUTOMÁTICA DE SU REGLAMENT
     <footer>
       <p class="small">Última actualización: 31 de octubre de 2026.</p>
   </div>
+<!-- TODO: sustituir href="#" y onclick por la URL del PDF del reglamento (con download) cuando esté publicado -->
+<div class="barra-acciones">
+    <a class="principal" href="#" onclick="return false;">Descargar reglamento</a>
+</div>
 <div class="navigation-buttons">
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnTop" class="nav-btn" title="Volver arriba" aria-label="Volver arriba">
         <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
