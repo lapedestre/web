@@ -12308,7 +12308,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-top: 1.5rem;
 }
 
-/* Barra de acciones fija en móvil */
+/* Barra de acciones fija (móvil, tablet y PC) */
 .cta-movil {
   position: fixed;
   left: 0;
@@ -12330,12 +12330,22 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-weight: 700;
   text-transform: uppercase;
 }
-@media (max-width: 767.98px) {
-  body#page-top {
-    padding-bottom: 4.5rem;
+body#page-top {
+  padding-bottom: 4.5rem;
+}
+.back-to-top {
+  bottom: 5.5rem;
+}
+@media (min-width: 768px) {
+  .cta-movil {
+    justify-content: center;
   }
+  .cta-movil .btn {
+    flex: 0 1 320px;
+  }
+}
+@media (max-width: 767.98px) {
   .back-to-top {
-    bottom: 5.5rem;
     opacity: 0.55;
     transition: opacity 0.2s ease;
   }
